@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+    padding: 1%;
+    background: rgb(0, 49, 77);
+}
+.header, .main, .footer{
+    width: 60%;
+    margin: 1% auto 0 auto !important;
+    padding: 1%;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.header input{
+    display: block;
+    margin: 1% auto;
+    width: 80%;
+    border: 1px solid turquoise;
+    color: turquoise;
+    height: 1.9rem;
+    border-radius: 4px;
+    padding: .5%;
+    padding-left: 2%;
+    font-size: 15px;
+}
+.header input:focus,
+.header button:focus{
+    outline: none;
+}
+.header button{
+    display: block;
+    margin: 1% auto;
+    padding: 1.3% 0 !important;
+    background: turquoise;
+    color: #fff;
+    font-weight: bold;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.header button:hover{
+    background: rgba(64, 224, 208, 0.815);
+}
+/* main */
+.main{
+    height: auto;
+}
+.main .container{
+    width: 95%;
+    margin: 1%;
+    height: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    box-shadow: 2px 2px 5px 5px rgba(41, 41, 41, 0.158);
+    border-radius: 5px;
+    /* display: none; */
+}
+.main .container img{
+    width: 95%;
+    height: 70%;
+}
+/* loader animtion */
+.main .container .loader{
+    margin-top: 2%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(255, 0, 170);
+    border-bottom: 16px solid turquoise;
+    border-right: 16px solid rgb(255, 208, 0);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s ease infinite;
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* footer */
+.footer{
+    color: #aaaaaa;
+    font-weight: bold;
+}
+.footer a{
+    color: inherit;
+}
+
+/* list */
+.main .list{
+    width: 95%;
+    margin: 2% 1%;
+    padding: 1% 2%;
+    box-shadow: 2px 2px 5px 5px rgba(41, 41, 41, 0.158);
+    border-radius: 5px;
+    color: #3a3a3a;
+}
+.main .list .upper{
+    display: block;
+    font-weight: bold;
+}
+.main .list .upper #todo{
+    cursor: pointer;
+}
+.main .list .upper .todoName{
+    color: #000;
+    margin: 0 2%;
+    font-size: 18px;
+    overflow: hidden;
+}
+.main .list .upper .close{
+    float: right;
+    color: #f00;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+}
+.main .list .upper .close:focus{
+    outline: none;
+}
+.main .list small.date{
+    margin: 1% 4%;
+}
+.mainList{
+    max-height: 320px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: none;
+}
+.top{
+    margin: 1% auto;
+    padding: 1.3% 0 ;
+    width: 90%;
+    background: #eee;
+    border: none;
+    border-radius: 5px;
+    color: turquoise;
+    /* font-weight: bold; */
+    display: flex;
+    justify-content: space-around;
+}
+.top .checked, .top .total{
+    width: 50%;
+    padding: 1%;
+}
+.badge{
+    font-weight: bold;
+    font-size: 18px;
+}
+/* mobile responsivenss */
+@media only screen and (max-width: 768px){
+    .header, .main, .footer{
+        width: 95%;
+    }
+    
+}
+.return{
+    width: 20%;
+    margin: auto;
+    border: 1px solid turquoise;
+    border-radius: 4px;
+    background: transparent;
+    color: turquoise;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+.return:focus{
+    outline: none;
+}
+.return:hover{
+    color: aqua;
+    border: 1px solid aqua;
+}
+@media only screen and (max-width: 768px){
+    .header, .main, .footer{
+        width: 90%;
+    }
+    .header input, .header button{
+        width: 90%;
+    }
+    .main .list .upper .todoName{
+        font-size: 15px;
+    }
+    .mainList{
+        max-height: 500px;
+    }
+    body{
+        padding: 0;
+    }
+    .footer{
+        padding: 0.5% 1%;
+        margin: 2px auto;
+    }
+    .return{
+        width: 50%;
+    }
+    
+}
